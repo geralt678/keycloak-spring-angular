@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   userRoles: string [];
   userContent: string;
   adminContent: string;
+  users: string [];
 
   constructor(private readonly keycloak: KeycloakService, private backendService: BackendService) { }
 
@@ -34,6 +35,13 @@ export class AppComponent implements OnInit {
         this.adminContent = response.data;
       }, error => {
         this.adminContent = error.error.error;
+      });
+
+
+      this.backendService.getUsers().subscribe(response => {
+        this.users = response;
+      }, error => {
+        console.log('dupa');
       });
     }
   }

@@ -20,4 +20,8 @@ export class BackendService {
     return this.httpClient.get(API_URL + '/admin-data');
   }
 
+  getUsers(): Observable<any> {
+    return this.httpClient.get(API_URL + '/user-realm');
+  }
+
 }

@@ -4,10 +4,6 @@
   <button class="btn btn-info" *ngIf="isLoggedIn" type="button" (click)="logout()">Log out</button>
   <button class="btn btn-info"  *ngIf="!isLoggedIn" type="button" (click)="login()">Log in</button>
 
-
-
-
-
 <ng-container *ngIf="userProfile">
   <h2>User information</h2>
   <table>
@@ -44,6 +40,11 @@
   <br />
   <br />
   <p>Admin content: {{adminContent}}</p>
+
+
+  <br />
+  <p *ngFor="let user of users">user-id: {{user}}</p>
+
 
 </ng-container>
 </div>
