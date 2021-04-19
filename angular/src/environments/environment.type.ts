@@ -5,6 +5,7 @@ export class KeycloakOptions {
 }
 
 export class EnvironmentConfiguration {
+  production: boolean;
   apiUrl: string;
   appUrl: string;
   keycloak: KeycloakOptions;
