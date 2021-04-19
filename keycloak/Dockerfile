@@ -1,6 +1,0 @@
-FROM jboss/keycloak
-
-ENV KEYCLOAK_VERSION 12.0.4
-
-EXPOSE 8080
-
